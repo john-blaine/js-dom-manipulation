@@ -9,6 +9,8 @@ const errorNotBlue = document.getElementsByClassName('error-not-blue');
 
 const evens = document.querySelectorAll('li:nth-child(even)');
 
+const romanceItems = document.querySelectorAll('nav#myNav ul li');
+
 myButton.addEventListener('click', () => {
   myHeading.style.color = myTextInput.value;
   for (let i = 0; i < myList.length; i++) {
@@ -19,6 +21,12 @@ myButton.addEventListener('click', () => {
   }
 });
 
-for (let i = 0; i < evens.length; i += 1) {
-  evens[i].style.backgroundColor = 'lightgray';
+for (let k = 0; k < evens.length; k++) {
+  evens[k].style.backgroundColor = 'lightgray';
 }
+
+for (let l = 0; l < romanceItems.length; l++) {
+  romanceItems[l].style.color = 'darkred';
+}
+
+console.log(romanceItems)
