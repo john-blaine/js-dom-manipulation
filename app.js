@@ -18,6 +18,9 @@ const button = document.querySelector('button.description');
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
 
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
+
 myButton.addEventListener('click', () => {
   myHeading.style.color = myTextInput.value;
   for (let i = 0; i < myList.length; i++) {
@@ -49,3 +52,12 @@ toggleList.addEventListener('click', () => {
     listDiv.style.display = 'none';
   }
 });
+
+addItemButton.addEventListener('click', () => {
+  let newListItem = document.createElement('li');
+  newListItem.append(addItemInput.value);
+
+  let tempList = document.querySelector('ul.firstList');
+  tempList.appendChild(newListItem);
+});
+
