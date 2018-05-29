@@ -11,6 +11,10 @@ const evens = document.querySelectorAll('li:nth-child(even)');
 
 const romanceItems = document.querySelectorAll('nav#myNav ul li');
 
+const input = document.querySelector('input.description');
+const p = document.querySelector('p.description');
+const button = document.querySelector('button.description');
+
 myButton.addEventListener('click', () => {
   myHeading.style.color = myTextInput.value;
   for (let i = 0; i < myList.length; i++) {
@@ -29,4 +33,6 @@ for (let l = 0; l < romanceItems.length; l++) {
   romanceItems[l].style.color = 'darkred';
 }
 
-console.log(romanceItems)
+button.addEventListener('click', () => {
+  p.textContent = input.value + ':';
+});
