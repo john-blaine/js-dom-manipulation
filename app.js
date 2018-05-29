@@ -21,6 +21,8 @@ const listDiv = document.querySelector('.list');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 
+const removeItemButton = document.querySelector('button.removeItemButton');
+
 myButton.addEventListener('click', () => {
   myHeading.style.color = myTextInput.value;
   for (let i = 0; i < myList.length; i++) {
@@ -65,3 +67,8 @@ addItemButton.addEventListener('click', () => {
   addItemInput.value = '';
 });
 
+removeItemButton.addEventListener('click', () => {
+  let firstList = document.querySelector('ul.firstList');
+  let lastChild = document.querySelector('ul.firstList li:last-child');
+  firstList.removeChild(lastChild);
+});
