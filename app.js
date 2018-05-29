@@ -11,7 +11,7 @@ const evens = document.querySelectorAll('li:nth-child(even)');
 
 const romanceItems = document.querySelectorAll('nav#myNav ul li');
 
-const input = document.querySelector('input.description');
+const descriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
 
@@ -40,7 +40,7 @@ for (let l = 0; l < romanceItems.length; l++) {
 }
 
 descriptionButton.addEventListener('click', () => {
-  descriptionP.textContent = input.value + ':';
+  descriptionP.textContent = descriptionInput.value + ':';
 });
 
 toggleList.addEventListener('click', () => {
@@ -59,7 +59,7 @@ addItemButton.addEventListener('click', () => {
   //or
   newListItem.textContent = addItemInput.value;
 
-  let tempList = document.querySelector('ul.firstList');
-  tempList.appendChild(newListItem);
+  let firstList = document.querySelector('ul.firstList');
+  firstList.appendChild(newListItem);
 });
 
