@@ -12,8 +12,8 @@ const evens = document.querySelectorAll('li:nth-child(even)');
 const romanceItems = document.querySelectorAll('nav#myNav ul li');
 
 const input = document.querySelector('input.description');
-const p = document.querySelector('p.description');
-const button = document.querySelector('button.description');
+const descriptionP = document.querySelector('p.description');
+const descriptionButton = document.querySelector('button.description');
 
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
@@ -39,8 +39,8 @@ for (let l = 0; l < romanceItems.length; l++) {
   romanceItems[l].style.color = 'darkred';
 }
 
-button.addEventListener('click', () => {
-  p.textContent = input.value + ':';
+descriptionButton.addEventListener('click', () => {
+  descriptionP.textContent = input.value + ':';
 });
 
 toggleList.addEventListener('click', () => {
@@ -55,7 +55,9 @@ toggleList.addEventListener('click', () => {
 
 addItemButton.addEventListener('click', () => {
   let newListItem = document.createElement('li');
-  newListItem.append(addItemInput.value);
+  //newListItem.append(addItemInput.value);
+  //or
+  newListItem.textContent = addItemInput.value;
 
   let tempList = document.querySelector('ul.firstList');
   tempList.appendChild(newListItem);
