@@ -1,9 +1,9 @@
-function say(something) {
-  console.log(something);
-}
+/*jshint esversion: 6 */
 
 function exec(func, arg) {
   func(arg);
 }
 
-exec(say, 'Greetings');
+exec((something) => {
+  console.log(something);
+}, 'Greetings');
