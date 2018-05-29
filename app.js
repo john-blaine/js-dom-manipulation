@@ -15,6 +15,9 @@ const input = document.querySelector('input.description');
 const p = document.querySelector('p.description');
 const button = document.querySelector('button.description');
 
+const toggleList = document.getElementById('toggleList');
+const listDiv = document.querySelector('.list');
+
 myButton.addEventListener('click', () => {
   myHeading.style.color = myTextInput.value;
   for (let i = 0; i < myList.length; i++) {
@@ -35,4 +38,8 @@ for (let l = 0; l < romanceItems.length; l++) {
 
 button.addEventListener('click', () => {
   p.textContent = input.value + ':';
+});
+
+toggleList.addEventListener('click', () => {
+  listDiv.style.display = 'none';
 });
