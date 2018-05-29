@@ -41,5 +41,11 @@ button.addEventListener('click', () => {
 });
 
 toggleList.addEventListener('click', () => {
-  listDiv.style.display = 'none';
+  if (listDiv.style.display == 'none') {
+    toggleList.textContent = 'Hide List';
+    listDiv.style.display = 'block';
+  } else {
+    toggleList.textContent = 'Show list';
+    listDiv.style.display = 'none';
+  }
 });
