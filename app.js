@@ -41,6 +41,7 @@ for (let l = 0; l < romanceItems.length; l++) {
 
 descriptionButton.addEventListener('click', () => {
   descriptionP.textContent = descriptionInput.value + ':';
+  descriptionInput.value = '';
 });
 
 toggleList.addEventListener('click', () => {
@@ -61,5 +62,6 @@ addItemButton.addEventListener('click', () => {
 
   let firstList = document.querySelector('ul.firstList');
   firstList.appendChild(newListItem);
+  addItemInput.value = '';
 });
 
