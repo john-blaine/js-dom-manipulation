@@ -25,16 +25,19 @@ const removeItemButton = document.querySelector('button.removeItemButton');
 
 const listItems = document.querySelectorAll('li');
 
-for (let k = 0; k < listItems.length; k++) {
-  listItems[k].addEventListener('mouseover', () => {
-    listItems[k].textContent = listItems[k].textContent.toUpperCase();
-  });
+const firstUl = document.querySelector('ul');
 
-  listItems[k].addEventListener('mouseout', () => {
-    listItems[k].textContent = listItems[k].textContent.toLowerCase();
-  });
-}
+firstUl.addEventListener('mouseover', (event) => {
+  if (event.target.tagName === 'LI') {
+    event.target.textContent = event.target.textContent.toUpperCase();
+  }
+});
 
+firstUl.addEventListener('mouseout', (event) => {
+  if (event.target.tagName === 'LI') {
+    event.target.textContent = event.target.textContent.toLowerCase();
+  }
+});
 
 
 myButton.addEventListener('click', () => {
