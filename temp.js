@@ -1,9 +1,5 @@
 /*jshint esversion: 6 */
 
-function exec(func, arg) {
-  func(arg);
-}
-
-exec((something) => {
+window.setTimeout((something) => {
   console.log(something);
-}, 'Greetings');
+}, 3000, 'Greetings');
