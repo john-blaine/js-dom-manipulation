@@ -27,18 +27,13 @@ const listItems = document.querySelectorAll('li');
 
 const firstUl = document.querySelector('ul');
 
-firstUl.addEventListener('mouseover', (e) => {
-  if (event.target.tagName === 'LI') {
-    e.target.parentNode.removeChild(e.target);
+firstUl.addEventListener('click', (e) => {
+  if (event.target.tagName === 'BUTTON') {
+    let li = e.target.parentNode;
+    let ul = li.parentNode;
+    ul.removeChild(li);
   }
 });
-
-firstUl.addEventListener('mouseout', (event) => {
-  if (event.target.tagName === 'LI') {
-    event.target.textContent = event.target.textContent.toLowerCase();
-  }
-});
-
 
 myButton.addEventListener('click', () => {
   myHeading.style.color = myTextInput.value;
