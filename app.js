@@ -28,7 +28,7 @@ const listItems = document.querySelectorAll('li');
 const firstUl = document.querySelector('ul');
 
 firstUl.addEventListener('click', (e) => {
-  if (event.target.tagName === 'BUTTON') {
+  if (event.target.tagName === 'BUTTON' && event.target.className === 'remove') {
     let li = e.target.parentNode;
     let ul = li.parentNode;
     ul.removeChild(li);
@@ -70,8 +70,6 @@ toggleList.addEventListener('click', () => {
 
 addItemButton.addEventListener('click', () => {
   let newListItem = document.createElement('li');
-  //newListItem.append(addItemInput.value);
-  //or
   newListItem.textContent = addItemInput.value;
 
   let firstList = document.querySelector('ul.firstList');
