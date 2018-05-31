@@ -28,10 +28,13 @@ const listItems = document.querySelectorAll('li');
 const firstUl = document.querySelector('ul');
 
 firstUl.addEventListener('click', (e) => {
+  let li = e.target.parentNode;
+  let ul = li.parentNode;
   if (event.target.tagName === 'BUTTON' && event.target.className === 'remove') {
-    let li = e.target.parentNode;
-    let ul = li.parentNode;
     ul.removeChild(li);
+  }
+  if (event.target.tagName === 'BUTTON' && event.target.className === 'up') {
+    ul.insertBefore(li, li.previousElementSibling);
   }
 });
 
