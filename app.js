@@ -27,10 +27,8 @@ const listItems = document.querySelectorAll('li');
 
 const firstUl = document.querySelector('ul');
 
-firstUl.addEventListener('mouseover', (event) => {
-  if (event.target.tagName === 'LI') {
-    event.target.textContent = event.target.textContent.toUpperCase();
-  }
+firstUl.addEventListener('mouseover', (e) => {
+  e.target.parentNode.removeChild(e.target);
 });
 
 firstUl.addEventListener('mouseout', (event) => {
