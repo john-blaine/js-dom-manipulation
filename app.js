@@ -33,8 +33,13 @@ firstUl.addEventListener('click', (e) => {
   if (event.target.tagName === 'BUTTON' && event.target.className === 'remove') {
     ul.removeChild(li);
   }
+
   if (event.target.tagName === 'BUTTON' && event.target.className === 'up') {
     ul.insertBefore(li, li.previousElementSibling);
+  }
+
+  if (event.target.tagName === 'BUTTON' && event.target.className === 'down') {
+    ul.insertBefore(li, li.nextElementSibling.nextElementSibling);
   }
 });
 
