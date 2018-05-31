@@ -28,7 +28,9 @@ const listItems = document.querySelectorAll('li');
 const firstUl = document.querySelector('ul');
 
 firstUl.addEventListener('mouseover', (e) => {
-  e.target.parentNode.removeChild(e.target);
+  if (event.target.tagName === 'LI') {
+    e.target.parentNode.removeChild(e.target);
+  }
 });
 
 firstUl.addEventListener('mouseout', (event) => {
