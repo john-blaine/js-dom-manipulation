@@ -35,11 +35,15 @@ firstUl.addEventListener('click', (e) => {
   }
 
   if (event.target.tagName === 'BUTTON' && event.target.className === 'up') {
-    ul.insertBefore(li, li.previousElementSibling);
+    if (li.previousElementSibling) {
+      ul.insertBefore(li, li.previousElementSibling);
+    }
   }
 
   if (event.target.tagName === 'BUTTON' && event.target.className === 'down') {
-    ul.insertBefore(li, li.nextElementSibling.nextElementSibling);
+    if (li.nextElementSibling) {
+      ul.insertBefore(li.nextElementSibling, li);
+    }
   }
 });
 
